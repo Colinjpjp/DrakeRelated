@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Drake Related</title>
+        <link rel="stylesheet" href="style/style.css" type="text/css" >
+        <link rel="shortcut icon" href="images/OVO-Logo.png" type="image/x-icon">
+        <script src="/script/script-section.js" defer></script>
+        <script src="script/include-html.js"defer></script>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-s-12 col-m-4 col-l-4 col-xl-4" >
+                <div include-html="html/header.html"></div>
+            </div>
+
+            <div class="col-xs-12 col-s-12 col-m-8 col-l-6 col-xl-6">
+                
+    <div class="row">
+        <h1 class="col-xs-12 h1-products">Álbumes</h1>
+        <form action="#" class="col-xs-12 col-s-6 col-m-8 col-l-8 col-xl-8 first-form" method="dialog">
+            <input type="search" placeholder="Busca Una referencia" class="search-1">
+        </form>
+    
+        <div class="col-xs-12 col-s-6 col-m-4 col-l-4 col-xl-4">
+            <select name="select" id="select-1">
+            <option id="option-1">Mas vendidos</option>
+            <option id="option-2" selected>Mas recientes</option>
+            <option id="option-3">Aclamados por la Critica</option>
+            <option id="option-4">Precio Mas bajo</option>
+            <option id="option-5">Precio Mas alto</option>
+            <option id="option-6">Mas populares</option>
+            </select>
+        </div>
+    </div>
+    
+
+
+    <div class="row">
+        <div class="Products"></div>
+        <div class="col-xs-12 darkMode">
+            <select id="select-2">
+                <option selected>Dark Mode</option>
+                <option>Light Mode</option>
+            </select>
+        </div>
+    </div> 
+</div>
+
+</div>
+    </div>
+
+    <script type="text/javascript">
+        let selectOfOrder = document.getElementById("select-1")
+        let ProductsSection = document.querySelector(".Products");
+        function change (){
+
+            if(selectOfOrder.value === "Mas recientes"){
+                $(".Products").load("/mode/MasRecientes.html");
+
+            }else if(selectOfOrder.value === "Mas vendidos"){
+                $(".Products").load("/mode/MasVendidos.html");
+
+            }else if (selectOfOrder.value === "Aclamados por la Critica"){
+                $(".Products").load("/mode/AclamadosPorLaCritica.html");
+
+            }else if (selectOfOrder.value === "Precio Mas bajo"){
+                $(".Products").load("/mode/PrecioMasBajo.html");
+
+            }else if(selectOfOrder.value === "Precio Mas alto"){
+                $(".Products").load("/mode/PrecioMasAlto.html");
+
+            }else if(selectOfOrder.value === "Mas populares" ){
+                $(".Products").load("/mode/MasPopulares.html")
+            }
+        }
+        selectOfOrder.onchange = ()=>{
+            change();
+        }
+
+        $(function (){
+            $(".Products").load("/mode/MasRecientes.html")
+        })
+
+    </script>
+</body>
+</html>
+

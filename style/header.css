@@ -1,0 +1,72 @@
+header{
+    color: white;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    padding: 10px;
+    border: solid 1px var(--black-color);
+    background-color: transparent;
+    transition: all 0.5s;
+}
+
+header:hover{
+    color: white;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    padding: 10px;
+    background-color: transparent;
+    box-shadow: 3px -3px 10px black;
+    transform: scale(1.0010);
+}
+
+header > a > img{
+    border: solid 1px transparent;
+    border-radius: 100%;
+    padding: 10px;
+    transition: 0.3s;
+    display: block;
+    margin-left: 10px;
+    filter: saturate(0%);
+}
+
+header > a > img:hover{
+    border: solid 1px #AB925E;
+    border-radius: 100%;
+    padding: 10px;
+    filter: saturate(100%);
+    transform: scale(1.03);
+}
+
+header > h1{
+    font-size: 3rem;
+    margin:0;
+    margin-bottom: 15px;
+    margin-left: 40px;
+}
+
+header > ul:last-child{
+
+    padding-bottom: 10px;
+}
+
+header > ul > li{
+    margin-bottom: 15px;
+}
+
+@media only screen and (max-width:768px){
+    header{
+        text-align: center;
+    }
+
+    header > h1{
+        margin: 0 0 15px 0;
+    }
+    
+    #ovo{
+       display: block;
+       margin: 0 auto;
+    }
+
+    header > ul{
+        padding: 0;
+    }
+}
