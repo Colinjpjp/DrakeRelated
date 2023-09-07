@@ -6,7 +6,7 @@
         <title>Drake Related</title>
         <link rel="stylesheet" href="style/style.css" type="text/css" >
         <link rel="shortcut icon" href="images/OVO-Logo.png" type="image/x-icon">
-        <script src="/script/script-section.js" defer></script>
+        <script src="script/script-section.js" defer></script>
         <script src="script/include-html.js"defer></script>
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 </head>
@@ -58,22 +58,22 @@
         function change (){
 
             if(selectOfOrder.value === "Mas recientes"){
-                $(".Products").load("/mode/MasRecientes.html");
+                $(".Products").load("mode/MasRecientes.html");
 
             }else if(selectOfOrder.value === "Mas vendidos"){
-                $(".Products").load("/mode/MasVendidos.html");
+                $(".Products").load("mode/MasVendidos.html");
 
             }else if (selectOfOrder.value === "Aclamados por la Critica"){
                 $(".Products").load("/mode/AclamadosPorLaCritica.html");
 
             }else if (selectOfOrder.value === "Precio Mas bajo"){
-                $(".Products").load("/mode/PrecioMasBajo.html");
+                $(".Products").load("mode/PrecioMasBajo.html");
 
             }else if(selectOfOrder.value === "Precio Mas alto"){
-                $(".Products").load("/mode/PrecioMasAlto.html");
+                $(".Products").load("mode/PrecioMasAlto.html");
 
             }else if(selectOfOrder.value === "Mas populares" ){
-                $(".Products").load("/mode/MasPopulares.html")
+                $(".Products").load("mode/MasPopulares.html")
             }
         }
         selectOfOrder.onchange = ()=>{
@@ -81,7 +81,7 @@
         }
 
         $(function (){
-            $(".Products").load("/mode/MasRecientes.html")
+            $(".Products").load("mode/MasRecientes.html")
         })
 
     </script>
