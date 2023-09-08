@@ -6,15 +6,15 @@ let LinkStyleSheet = document.querySelector("link")
 function  DarkModeSelected(){
     switch(selectOfDarkMode.value){
          case "Dark Mode":
-             LinkStyleSheet.setAttribute("href","/style/style.css")
+             LinkStyleSheet.setAttribute("href","./style/style.css")
              break;
         
         case "Light Mode": 
-            LinkStyleSheet.setAttribute("href", "/style/LigthMode/style.css");
+            LinkStyleSheet.setAttribute("href", "./style/LigthMode/style.css");
             break;
         
         default:
-            LinkStyleSheet.setAttribute("href","/style/style.css")
+            LinkStyleSheet.setAttribute("href","./style/style.css")
             break;
 
     }
