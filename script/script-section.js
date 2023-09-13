@@ -22,3 +22,20 @@ selectOfDarkMode.onchange = ()=>{
     DarkModeSelected();
 }
 
+
+let names = document.querySelectorAll(".name-product");
+let inputSearch = document.querySelector(".search-1");
+
+// function searching() {
+    document.addEventListener("keypress", e =>{
+        if(e.target.matches(".search-1")) {
+            document.querySelectorAll(".name-product").forEach(album =>{
+                album.textContent.toLowerCase().includes(e.target.value)
+                ? album.classList.remove("filtro")
+                : album.classList.add("filtro")
+            })
+        }
+    })
+// }
+
+// inputSearch.addEventListener("keypress", searching)
