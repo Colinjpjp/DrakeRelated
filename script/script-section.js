@@ -1,21 +1,22 @@
 const selectOfDarkMode = document.getElementById("select-2");
-const LinkStyleSheet = document.querySelector("link");
+const LinkStyleSheet = document.querySelector(".linkCss");
 
 function DarkModeSelected() {
   switch (selectOfDarkMode.value) {
     case "Dark Mode":
-      LinkStyleSheet.setAttribute("href", "./style/style.css");
+      LinkStyleSheet.setAttribute("href", "/style/style.css");
       break;
 
     case "Light Mode":
-      LinkStyleSheet.setAttribute("href", "./style/LigthMode/style.css");
+      LinkStyleSheet.setAttribute("href", "/style/LigthMode/style.css");
       break;
 
     default:
-      LinkStyleSheet.setAttribute("href", "./style/style.css");
+      LinkStyleSheet.setAttribute("href", "/style/style.css");
       break;
   }
 }
+selectOfDarkMode.onchange = DarkModeSelected;
 
 const selectOfOrder = document.getElementById("select-1");
 const ProductsSection = document.querySelector(".Products");
@@ -43,14 +44,14 @@ $(function () {
   $(".Products").load("mode/MasRecientes.html");
 });
 
-let contenedor = document.querySelectorAll(".products");
 
-addEventListener("keyup", (e) => {
-  if (e.target.matches(".search-1")) {
-    document.querySelectorAll(".name-product").forEach((names) => {
-      names.textContent.toLowerCase().includes(e.target.value.toLowerCase())
-        ? names.classList.remove("filter")
-        : names.classList.add("filter");
-    });
-  }
-});
+  addEventListener("keyup", (e) => {
+    if (e.target.matches(".search-1")) {
+      document.querySelectorAll(".products").forEach((names) => {
+        names.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+          ? names.classList.remove("filter")
+          : names.classList.add("filter");
+      });
+    }
+  });
+
